@@ -23,7 +23,7 @@ function comparer(){
 
 }
 
-function win(){
+function checkIfWin(){
     if(compteurJoueur === 3){
         alert("Tu as gagné")
     }
@@ -36,10 +36,37 @@ function win(){
 // })
 pierreJoueur.addEventListener("click",()=>{
     pierreJoueur.classList.add("select")
+    if(comparer() return false){
+        compteurOrdi++;
+        alert("1pts pour l'ordi");
+    }
+    if(comparer() return true){
+        compteurJoueur++;
+        alert("1pts pour toi");
+    }
+    checkIfWin()
 })
 feuilleJoueur.addEventListener("click",()=>{
     feuilleJoueur.classList.add("select")
+    if(comparer() return false){
+        compteurOrdi++;
+        alert("1pts pour l'ordi");
+    }
+    if(comparer() return true){
+        compteurJoueur++;
+        alert("1pts pour toi");
+    }
+    checkIfWin()
 })
 ciseauJoueur.addEventListener("click",()=>{
     ciseauJoueur.classList.add("select")
+    if(comparer() return false){
+        compteurOrdi++;
+        alert("1pts pour l'ordi");
+    }
+    if(comparer() return true){
+        compteurJoueur++;
+        alert("1pts pour toi");
+    }
+    checkIfWin()
 })

@@ -5,68 +5,99 @@ const spanJoueur = document.querySelector("#scoreJoueur");
 const spanOrdi = document.querySelector("#scoreOrdi")
 let compteurJoueur = spanJoueur.innerHTML;
 let compteurOrdi= spanOrdi.innerHTML;
-compteurJoueur = 1;
-compteurOrdi = 1;
-const pierreJoueur = document.querySelector("#pierre")
-const feuilleJoueur = document.querySelector("#feuille")
-const ciseauJoueur = document.querySelector("#ciseau")
-
-// const joue = document.querySelector("#joue")
-
+const choixJoueur = document.querySelectorAll(".bouton")
+const restart = document.querySelector("#restart")
 const coups = [P, F, C];
 
+
 function joueCoupAleatoire(){
-    return parseInt(Math.random() * coups.length);
-}
-
-function comparer(){
-
+    const comput = (parseInt(Math.random() * coups.length));
+    console.log(comput);
+    return coups[comput];
 }
 
 function checkIfWin(){
     if(compteurJoueur === 3){
         alert("Tu as gagné")
+        compteurJoueur = 0;
+        compteurOrdi = 0;
+        spanOrdi.innerHTML = compteurOrdi
+        spanJoueur.innerHTML = compteurJoueur
     }
     if(compteurOrdi === 3){
         alert("l'ordinateur a gagné")
+        compteurJoueur = 0;
+        compteurOrdi = 0;
+        spanOrdi.innerHTML = compteurOrdi
+        spanJoueur.innerHTML = compteurJoueur
     }
 }
-// joue.addEventListener("click",()=>{
-//     console.log(joueCoupAleatoire())
-// })
-pierreJoueur.addEventListener("click",()=>{
-    pierreJoueur.classList.add("select")
-    if(comparer() return false){
-        compteurOrdi++;
-        alert("1pts pour l'ordi");
+choixJoueur.forEach(function(item){
+item.addEventListener("click",()=>{
+    const coup = joueCoupAleatoire()
+    console.log(item.innerHTML);
+    if (item.innerHTML == "Pierre" &&  coup == "Pierre") {
+        alert("draw")
     }
-    if(comparer() return true){
-        compteurJoueur++;
-        alert("1pts pour toi");
+    else if (item.innerHTML == "Feuille" &&  coup == "Feuille") {
+        alert("draw")
     }
+    else if (item.innerHTML == "Ciseaux" &&  coup == "Ciseaux") {
+        alert("draw")
+    }
+    else if (item.innerHTML == "Pierre" &&  coup == "Ciseaux") {
+        
+        alert("l'ordinateur a joué Ciseaux")
+        alert("Tu gagnes cette manche")
+        compteurJoueur++
+        spanJoueur.innerHTML = compteurJoueur
+    }
+    else if (item.innerHTML == "Feuille" &&  coup == "Pierre") {
+        
+        alert("l'ordinateur a joué Pierre")
+        alert("Tu gagnes cette manche")
+        compteurJoueur++
+        spanJoueur.innerHTML = compteurJoueur
+    }
+    else if (item.innerHTML == "Ciseaux" &&  coup == "Feuille") {
+        
+        alert("l'ordinateur a joué Feuille")
+        alert("Tu gagnes cette manche")
+        compteurJoueur++
+        spanJoueur.innerHTML = compteurJoueur
+    }
+    else if (item.innerHTML == "Pierre" &&  coup == "Feuille") {
+        
+        alert("l'ordinateur a joué Feuille")
+        alert("Tu perds cette manche")
+        compteurOrdi++
+        spanOrdi.innerHTML = compteurOrdi
+    }
+    else if (item.innerHTML == "Feuille" &&  coup == "Ciseaux") {
+        
+        alert("l'ordinateur a joué Ciseaux")
+        alert("Tu perds cette manche")
+        compteurOrdi++
+        spanOrdi.innerHTML = compteurOrdi
+    }
+    else if (item.innerHTML == "Ciseaux" &&  coup == "Pierre") {
+        
+        alert("l'ordinateur a joué Pierre")
+        alert("Tu perds cette manche")
+        compteurOrdi++
+        spanOrdi.innerHTML = compteurOrdi
+    }
+    ;
     checkIfWin()
+
 })
-feuilleJoueur.addEventListener("click",()=>{
-    feuilleJoueur.classList.add("select")
-    if(comparer() return false){
-        compteurOrdi++;
-        alert("1pts pour l'ordi");
-    }
-    if(comparer() return true){
-        compteurJoueur++;
-        alert("1pts pour toi");
-    }
-    checkIfWin()
+});
+
+restart.addEventListener("click",()=>{
+    compteurJoueur = 0;
+    compteurOrdi = 0;
+    spanOrdi.innerHTML = compteurOrdi
+    spanJoueur.innerHTML = compteurJoueur
+    alert("Partie remise à 0")
 })
-ciseauJoueur.addEventListener("click",()=>{
-    ciseauJoueur.classList.add("select")
-    if(comparer() return false){
-        compteurOrdi++;
-        alert("1pts pour l'ordi");
-    }
-    if(comparer() return true){
-        compteurJoueur++;
-        alert("1pts pour toi");
-    }
-    checkIfWin()
-})
+

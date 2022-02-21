@@ -2,11 +2,12 @@ const P = "Pierre";
 const F = "Feuille";
 const C = "Ciseaux";
 const spanJoueur = document.querySelector("#scoreJoueur");
-const spanOrdi = document.querySelector("#scoreOrdi")
+const spanOrdi = document.querySelector("#scoreOrdi");
+const youWin = document.querySelector(".gg")
 let compteurJoueur = spanJoueur.innerHTML;
 let compteurOrdi= spanOrdi.innerHTML;
-const choixJoueur = document.querySelectorAll(".bouton")
-const restart = document.querySelector("#restart")
+const choixJoueur = document.querySelectorAll(".bouton");
+const restart = document.querySelector("#restart");
 const coups = [P, F, C];
 
 
@@ -19,6 +20,7 @@ function joueCoupAleatoire(){
 function checkIfWin(){
     if(compteurJoueur === 3){
         alert("Tu as gagné")
+        youWin.classList.add("active")
         compteurJoueur = 0;
         compteurOrdi = 0;
         spanOrdi.innerHTML = compteurOrdi

@@ -1,3 +1,46 @@
+*{
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.jeu{
+    margin-top: 200px;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.bouton{
+    width: 80px;
+    border-radius: 5px;
+}
 .select{
     background-color: beige;
+}
+#restart{
+    margin-top: 40px;
+    width: 100px;
+    border-radius: 5px;
+}
+.score{
+    color: aliceblue;
+}
+.gg{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(173, 163, 168, 0.54);
+    visibility: hidden;
+}
+.active{
+    visibility: visible;
 }

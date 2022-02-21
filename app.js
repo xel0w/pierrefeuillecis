@@ -4,6 +4,7 @@ const C = "Ciseaux";
 const spanJoueur = document.querySelector("#scoreJoueur");
 const spanOrdi = document.querySelector("#scoreOrdi");
 const youWin = document.querySelector(".gg")
+const youLoose = document.querySelector(".loose")
 let compteurJoueur = spanJoueur.innerHTML;
 let compteurOrdi= spanOrdi.innerHTML;
 const choixJoueur = document.querySelectorAll(".bouton");
@@ -19,19 +20,22 @@ function joueCoupAleatoire(){
 
 function checkIfWin(){
     if(compteurJoueur === 3){
-        alert("Tu as gagné")
         youWin.classList.add("active")
+        alert("Tu as gagné")
         compteurJoueur = 0;
         compteurOrdi = 0;
         spanOrdi.innerHTML = compteurOrdi
         spanJoueur.innerHTML = compteurJoueur
+        setTimeout(()=>{youWin.classList.remove("active")},3000)
     }
     if(compteurOrdi === 3){
+        youLoose.classList.add("active")
         alert("l'ordinateur a gagné")
         compteurJoueur = 0;
         compteurOrdi = 0;
         spanOrdi.innerHTML = compteurOrdi
         spanJoueur.innerHTML = compteurJoueur
+        setTimeout(()=>{youLoose.classList.remove("active")},3000)
     }
 }
 choixJoueur.forEach(function(item){
@@ -39,13 +43,13 @@ item.addEventListener("click",()=>{
     const coup = joueCoupAleatoire()
     console.log(item.innerHTML);
     if (item.innerHTML == "Pierre" &&  coup == "Pierre") {
-        alert("draw")
+        alert("Egalité")
     }
     else if (item.innerHTML == "Feuille" &&  coup == "Feuille") {
-        alert("draw")
+        alert("Egalité")
     }
     else if (item.innerHTML == "Ciseaux" &&  coup == "Ciseaux") {
-        alert("draw")
+        alert("Egalité")
     }
     else if (item.innerHTML == "Pierre" &&  coup == "Ciseaux") {
         

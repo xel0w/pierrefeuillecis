@@ -1,14 +1,22 @@
+@font-face {
+    font-family: "tkt";
+    src: url("../CHEDROS.ttf")}
 *{
     margin: 0;
+    font-family: tkt;
 }
 body{
     height: 100vh;
     overflow: hidden;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(to right bottom, #2c0537, #372046, #443852, #534f5d, #666666);
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 .jeu{
     margin-top: 50px;
@@ -35,7 +43,7 @@ body{
     width: 100px;
     height: 60px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 28px;
 }
 .score{
     color: aliceblue;
@@ -68,5 +76,39 @@ h1{
     text-align: center;
     color: aliceblue;
     font-size: 100px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.resultOrdi, .resultJoueur{
+    width: 20vw;
+    height: 40vh;   
+}
+.imgResultJoueur, .imgResultOrdi{
+    width: 100%;
+    height: 90%;
+}
+.addImagePierre{
+    background-image: url(../img/pierre.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.addImageFeuille{
+    background-image: url(../img/feuille.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.addImageCiseaux{
+    background-image: url(../img/ciseaux.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+h2{
+    color: aliceblue;
+    font-size: 50px;
+    text-align: center;
+}
+.res{
+    color: aliceblue;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }

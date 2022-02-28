@@ -5,16 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shifumi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/asset/css/style.css">
 </head>
 <body>
+    <div class="gg">
+    <img src="asset/img/win.png" alt="">
+</div>
+<div class="loose">
+    <img src="asset/img/loose.png" alt="">
+</div>
+    <div class="res">La partie peut commencer</div>
     <h1>SHIFUMI</h1>
+    <main>
+    <div class="resultJoueur">
+        <h2>Joueur</h2>
+        <div class="imgResultJoueur"></div>
+    </div>
     <div class="jeu">
         <div class="btn">
     <button class="bouton">Pierre</button>
     <button class="bouton">Feuille</button>
     <button class="bouton">Ciseaux</button>
-</div>
+    </div>
     <br>
     <div class="score">
         le score est de:
@@ -22,14 +34,14 @@
         <div class="ordi">Ordinateur = <span id="scoreOrdi">0</span></div>
     </div>
     <input type="button" id="restart" value="Restart">
-</div>
-<div class="gg">
-    <img src="win.png" alt="">
-</div>
-<div class="loose">
-    <img src="loose.png" alt="">
-</div>
+    </div>
+    <div class="resultOrdi">
+        <h2>Ordinateur</h2>
+        <div class="imgResultOrdi"></div>
+    </div>
+
+</main>
     
-    <script src="app.js"></script>
+    <script src="asset/js/app.js"></script>
 </body>
 </html>

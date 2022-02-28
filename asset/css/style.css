@@ -203,7 +203,9 @@ button{
         font-size: 40px;
         cursor: pointer;
     }
+    
 }
+
 @media screen and (max-width: 460px) {
     .jeu{
         margin-top: 50px;
@@ -239,5 +241,66 @@ button{
         border-radius: 5px;
         font-size: 40px;
         cursor: pointer;
+    }
+    
+    
+  }
+  @media screen and (orientation:landscape) and
+  (min-device-width: 320px) and (max-device-width: 900px) {
+     .res{
+         font-size: 18px;
+         position: relative;
+     }
+    .jeu{
+        height: 180px;
+        width: 500px;
+        position: fixed;
+        top: 35%;
+    }
+    .bouton{
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .btn{
+        margin-top: 1%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #restart{
+        margin:0%;
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .imgResultJoueur, .imgResultOrdi{
+        width: 90%;
+        height: 100%;
+    }
+    .loose img{
+        width: 40%;
+    }
+    .gg img{
+        width: 30%;
+    }
+    .replay{
+        top:2%;
+    }
+    .resultOrdi{
+        position: fixed;
+        top:5%;
+        right:0%;
+    }
+    .resultJoueur{
+        position: fixed;
+        top:5%;
+        left:0%;
+    }
+    .score{
+        padding: 2%;
     }
 }

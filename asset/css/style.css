@@ -34,6 +34,7 @@ main{
     height: 90px;
     border-radius: 5px;
     font-size: 35px;
+    cursor: pointer;
 }
 .select{
     background-color: beige;

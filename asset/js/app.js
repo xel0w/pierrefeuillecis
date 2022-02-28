@@ -112,7 +112,7 @@ item.addEventListener("click",()=>{
         imgJoueur.classList.add("addImagePierre")
         imgOrdi.classList.add("addImageFeuille")
         compteurOrdi++
-        res.innerHTML="L'ordinateur marques un point"
+        res.innerHTML="L'ordinateur marque un point"
         checkIfWin()
         
     }

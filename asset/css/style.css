@@ -246,7 +246,7 @@ button{
     
   }
   @media screen and (orientation:landscape) and
-  (min-device-width: 320px) and (max-device-width: 900px) {
+  (min-device-width: 320px) and (max-device-width: 5000px) {
      .res{
          font-size: 18px;
          position: relative;

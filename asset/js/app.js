@@ -37,9 +37,7 @@ function checkIfWin(){
         compteurOrdi = 0;
         spanOrdi.innerHTML = compteurOrdi
         spanJoueur.innerHTML = compteurJoueur
-        setTimeout(()=>{youWin.classList.remove("active")},3000)
-        setTimeout(()=>{removeClass()},3000)
-        res.innerHTML="La partie peut commencer"
+        res.innerHTML="Appuie sur Enter pour rejouer"
     }
     if(compteurOrdi === 3){
         youLoose.classList.add("active")
@@ -47,10 +45,17 @@ function checkIfWin(){
         compteurOrdi = 0;
         spanOrdi.innerHTML = compteurOrdi
         spanJoueur.innerHTML = compteurJoueur
-        setTimeout(()=>{youLoose.classList.remove("active")},3000)
-        setTimeout(()=>{removeClass()},3000)
+        res.innerHTML="Appuie sur Enter pour rejouer"
+        
+    }
+    document.addEventListener("keyup",(e)=>{
+        if(e.key ==="Enter"){
+        youLoose.classList.remove("active")
+        youWin.classList.remove("active")
+        removeClass()
         res.innerHTML="La partie peut commencer"
     }
+    })
 }
 choixJoueur.forEach(function(item){
 item.addEventListener("click",()=>{

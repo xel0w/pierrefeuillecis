@@ -4,6 +4,7 @@
 *{
     margin: 0;
     font-family: tkt;
+    user-select: none;
 }
 body{
     height: 100vh;
@@ -11,7 +12,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(to right bottom, #2c0537, #372046, #443852, #534f5d, #666666);
+    background: linear-gradient(to right bottom, #051937, #131736, #1c1634, #241431, #2a122e);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 main{
     width: 100%;
@@ -112,4 +115,14 @@ h2{
     text-align: center;
     margin-bottom: 5%;
     margin-top: 5%;
+}
+.etoile{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/pngeggmodif.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    z-index: -10;
+
 }

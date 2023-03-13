@@ -118,7 +118,6 @@ h2{
 }
 .res{
     color: aliceblue;
-    font-size: 50px;
     position: absolute;
     top:2%;
     text-align: center;
@@ -246,7 +245,7 @@ button{
     
   }
   @media screen and (orientation:landscape) and
-  (min-device-width: 320px) and (max-device-width: 5000px) {
+  (min-device-width: 320px) and (max-device-width: 978px) {
      .res{
          font-size: 18px;
          position: relative;
@@ -304,3 +303,10 @@ button{
         padding: 2%;
     }
 }
+    @media screen and (orientation:landscape) and
+    (min-device-width: 978px) and (max-device-width: 5000px) {
+       .res{
+           font-size: 3rem;
+           position: relative;
+       }
+    }
